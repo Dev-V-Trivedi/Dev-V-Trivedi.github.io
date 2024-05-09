@@ -150,11 +150,11 @@
 
   //contact form (formspree)
   $(document).ready(function() {
-    $('#contactForm').on('submit', function(e) {
+    $('#contacts').on('submit', function(e) {
         e.preventDefault();
 
         $.ajax({
-            url: $(this).attr('action'),
+            url: $(this).attr('POST'),
             type: 'POST',
             data: $(this).serialize(),
             success: function() {
