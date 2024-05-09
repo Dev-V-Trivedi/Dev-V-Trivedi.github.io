@@ -148,4 +148,23 @@
     $('.venobox').venobox();
   });
 
+  //contact form (formspree)
+  $(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: $(this).attr('action'),
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function() {
+                alert('Message sent!');
+            },
+            error: function() {
+                alert('Error sending message.');
+            }
+        });
+    });
+});
+
 })(jQuery);
