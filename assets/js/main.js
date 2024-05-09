@@ -154,7 +154,7 @@
         e.preventDefault();
 
         $.ajax({
-            url: $(this).attr('POST'),
+            url: $(this).attr('https://formspree.io/f/mnqeraep'),
             type: 'POST',
             data: $(this).serialize(),
             success: function() {
