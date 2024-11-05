@@ -148,24 +148,23 @@
     $('.venobox').venobox();
   });
 
-  // Contact form (Formspree)
+  //contact form (formspree)
   $(document).ready(function() {
     $('#contacts').on('submit', function(e) {
-      e.preventDefault();
+        e.preventDefault();
 
-      $.ajax({
-        url: 'https://formspree.io/f/mnqeraep',
-        type: 'POST',
-        data: $(this).serialize(),
-        success: function() {
-          alert('Message sent!');
-        },
-        error: function() {
-          alert('Error sending message.');
-        }
-      });
+        $.ajax({
+            url: $(this).attr('https://formspree.io/f/mnqeraep'),
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function() {
+                alert('Message sent!');
+            },
+            error: function() {
+                alert('Error sending message.');
+            }
+        });
     });
-  });
 });
 
 })(jQuery);
